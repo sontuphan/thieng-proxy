@@ -6,11 +6,8 @@ set -e
 # Update system
 apt-get update
 
+# Install vim
+apt-get install -y vim
+
 # Install certbot
-apt-get install software-properties-common
-add-apt-repository universe
-add-apt-repository ppa:certbot/certbot
-apt-get update
-apt-get install certbot python3-certbot-nginx
-# Setup certbot to nginx
-certbot --nginx
+apt-get install -y certbot python-certbot-nginx
