@@ -12,6 +12,13 @@ sudo sh docker.sh
 docker run -it -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt -w /home/thieng-proxy --name proxy tuphanson/thieng-proxy bash
 ```
 
+## Activate HTTPS
+
+```
+certbot --nginx -d thiengviet.com -m phan.son.tu.1994@gmail.com --agree-tos --redirect --non-interactive
+service nginx restart
+```
+
 ## Maintain network
 
 Create a network
