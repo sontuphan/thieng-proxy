@@ -8,7 +8,7 @@ RUN apt-get update
 COPY . .
 
 RUN sh packages.sh
-# RUN certbot --nginx -d thiengviet.com -m phan.son.tu.1994@gmail.com --agree-tos --redirect --non-interactive
+RUN certbot --nginx -d thiengviet.com -m phan.son.tu.1994@gmail.com --agree-tos --non-interactive
 
-CMD [ "certbot", "--nginx", "-d", "thiengviet.com", "-m", "phan.son.tu.1994@gmail.com", "--agree-tos", "--non-interactive"]
-# CMD [ "service", "nginx", "start" ]
+# CMD [ "certbot", "--nginx", "-d", "thiengviet.com", "-m", "phan.son.tu.1994@gmail.com", "--agree-tos", "--non-interactive"]
+CMD [ "service", "nginx", "start" ]
