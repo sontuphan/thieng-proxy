@@ -11,4 +11,4 @@ apt-get install -y vim
 apt-get install -y iputils-ping
 
 # Install certbot
-apt-get install -y certbot python-certbot-nginx
+apt-get install -y certbot python3-certbot-dns-cloudflare
